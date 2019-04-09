@@ -21,6 +21,9 @@
     "vuex-module-decorators": "^0.9.8"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
     "@types/jest": "^23.1.4",
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-e2e-cypress": "^3.5.0",
@@ -29,7 +32,6 @@
     "@vue/cli-plugin-typescript": "^3.5.0",
     "@vue/cli-plugin-unit-jest": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
     "@vue/eslint-config-typescript": "^4.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
