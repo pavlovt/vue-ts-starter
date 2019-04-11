@@ -1,7 +1,14 @@
-import { VuexModule, Module, MutationAction, getModule, Mutation, Action } from "vuex-module-decorators";
+import {
+  VuexModule,
+  Module,
+  MutationAction,
+  getModule,
+  Mutation,
+  Action
+} from "vuex-module-decorators";
 import store from "./index";
 
-@Module({ dynamic: true, name: "counter", store: store })
+@Module({ namespaced: true, dynamic: true, name: "counter", store: store })
 class Counter extends VuexModule {
   count = 0;
   zz = "zz";

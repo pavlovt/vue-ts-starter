@@ -7,6 +7,10 @@ import "./registerServiceWorker";
 
 Vue.config.productionTip = false;
 
+// import styles
+import "alertifyjs/build/css/alertify.min.css";
+import "alertifyjs/build/css/themes/default.min.css";
+
 new Vue({
   router,
   store,
