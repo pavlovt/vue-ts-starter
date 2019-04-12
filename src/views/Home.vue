@@ -18,8 +18,8 @@
         <td>{{item.title}}</td>
         <td>{{item.body}}</td>
         <td width="10%">
-          <button @click="core.goto('/posts/'+item.id)">Edit</button>
-          <button @click="post.remove(item.id)">Delete</button>
+          <button @click="core.goto('/posts/'+item.id)" class="btn-blue">Edit</button>
+          <button @click="post.remove(item.id)" class="btn-blue">Delete</button>
         </td>
       </tr>
     </table>

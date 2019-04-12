@@ -8,10 +8,11 @@ import "./registerServiceWorker";
 Vue.config.productionTip = false;
 
 // import styles
+import "./styles/main.scss";
 import "alertifyjs/build/css/alertify.min.css";
 import "alertifyjs/build/css/themes/default.min.css";
 
-window.vm = new Vue({
+(window as any).vm = new Vue({
   router,
   store,
   render: h => h(App)
