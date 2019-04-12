@@ -9,8 +9,10 @@ import { IApi } from "./core/api";
 // error
 export {};
 
-// define all global variable here
+// define all global variables here
 declare global {
+  // global vue instance of the app
+  var vm: any;
   var _: any;
   var conf: Conf;
   var msg: INotify;

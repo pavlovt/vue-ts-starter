@@ -28,7 +28,7 @@ class Core {
    * @param {object} params Params that are needed by the path
    */
   goto(path, params: any = {}, query: any = {}) {
-    (router as any).push({ path, params, query });
+    vm.$router.push({ path, params, query });
   }
 
   // return true if the value is [], {}, "", null, undefined

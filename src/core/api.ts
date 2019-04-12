@@ -78,10 +78,10 @@ class Api implements IApi {
   // default error handler
   private handleErrors(err: any) {
     // set the default error message if the server is not providing one
-    const msg = _.get(err, "response.message") || "Server error";
+    const message = _.get(err, "response.message") || "Server error";
 
     if (err.response.status !== 401) {
-      msg.error(msg);
+      msg.error(message);
     } else {
       // the session has expired - logout the user
       core.removeLocal("user");

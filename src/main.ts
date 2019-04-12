@@ -11,7 +11,7 @@ Vue.config.productionTip = false;
 import "alertifyjs/build/css/alertify.min.css";
 import "alertifyjs/build/css/themes/default.min.css";
 
-new Vue({
+window.vm = new Vue({
   router,
   store,
   render: h => h(App)

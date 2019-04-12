@@ -33,6 +33,6 @@ class Counter extends VuexModule {
     return { count: (this.state as any).count + 1 };
   }
 }
-console.log(getModule(Counter));
+// console.log(getModule(Counter));
 
 export default getModule(Counter);
