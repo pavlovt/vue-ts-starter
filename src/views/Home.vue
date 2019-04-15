@@ -6,7 +6,7 @@
     <button @click="counter.inc()">Inc</button>
     <button @click="counter.in()">Other Inc</button>
 
-    <table>
+    <table class="table-auto">
       <tr>
         <th>ID</th>
         <th>Name</th>
@@ -17,8 +17,8 @@
         <td>{{item.id}}</td>
         <td>{{item.title}}</td>
         <td>{{item.body}}</td>
-        <td width="10%">
-          <button @click="core.goto('/posts/'+item.id)" class="btn-blue">Edit</button>
+        <td width="220px">
+          <button @click="core.goto('/posts/'+item.id)" class="btn-blue mx-1">Edit</button>
           <button @click="post.remove(item.id)" class="btn-blue">Delete</button>
         </td>
       </tr>
@@ -36,7 +36,6 @@ import Post from "@/store/post";
 export default class Home extends Vue {
   counter = Counter;
   post = Post;
-  core = core;
 
   mounted() {
     Post.list();

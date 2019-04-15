@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .btn-blue {
-  @apply bg-blue-500 text-white font-bold py-1 px-4 rounded;
+  @apply bg-blue text-white font-bold py-1 px-4 rounded;
 }
 
 .btn-blue:hover {
-  @apply bg-blue-700;
+  @apply bg-blue-dark;
 }
