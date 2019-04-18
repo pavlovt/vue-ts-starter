@@ -17,7 +17,7 @@
         <input v-model="form.image">
       </div>
       <div>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="btn-blue">
       </div>
     </form>
   </div>
@@ -28,6 +28,8 @@ import { Component, Vue } from "vue-property-decorator";
 // import { getModule } from "vuex-module-decorators";
 import Counter from "@/store/counter";
 import Post from "@/store/post";
+import { XInput } from "@/parts/form/xinput.vue";
+// import XInput from "@/parts/form/zinput.vue";
 
 // Register the router hooks with their names
 // Component.registerHooks(["beforeRouteEnter"]);
@@ -43,6 +45,8 @@ export default class CustomComponent extends Vue {
     // call again the method if the route changes
     $route: "created"
   };
+
+  // components = { XInput };
 
   async submit() {
     this.form.qty = 0;

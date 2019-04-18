@@ -1,5 +1,7 @@
 import conf from "./conf";
 import core from "./core";
+// import * as form from "@/parts/form";
+// console.log(form);
 
 export default {
   install(Vue, options) {
@@ -14,6 +16,8 @@ export default {
 
     // register all form components
     // _(form).forIn((val, key) => {
+    //   console.log(val, key);
+
     //   Vue.component(key, val);
     // });
 
