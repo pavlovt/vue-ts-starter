@@ -1,6 +1,16 @@
 # Vue Typescript Starter Project
 
+# Setup
+
+- yarn install
+- npm -g i json-server
+
 ## Usage
+
+To run the servers execute these commands in the main folder:
+
+- yarn serve
+- json-server db.json
 
 There are several global variables which are defined in global.d.ts:
 
@@ -9,11 +19,12 @@ There are several global variables which are defined in global.d.ts:
 - msg: notification service
 - core: core utilities
 - api: api service to call the backend
+  They have autocomplete and can be used globally without importing.
 
 ## Project setup
 
 ```
-yarn install
+
 ```
 
 ### Compiles and hot-reloads for development
