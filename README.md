@@ -21,18 +21,6 @@ There are several global variables which are defined in global.d.ts:
 - api: api service to call the backend
   They have autocomplete and can be used globally without importing.
 
-## Project setup
-
-```
-
-```
-
-### Compiles and hot-reloads for development
-
-```
-yarn run serve
-```
-
 ### Compiles and minifies for production
 
 ```
