@@ -9,3 +9,19 @@
 .btn-blue:hover {
   @apply bg-blue-dark;
 }
+
+.input-error {
+  @apply .text-red .border-red-dark;
+}
+
+input {
+  @apply .border border-solid;
+}
+
+label {
+  @apply pr-2;
+}
+
+.error {
+  @apply .text-red-dark .pt-1;
+}

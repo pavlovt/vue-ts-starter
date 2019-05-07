@@ -1,7 +1,6 @@
 import conf from "./conf";
 import core from "./core";
-// import * as form from "@/parts/form";
-// console.log(form);
+import * as form from "@/parts/form";
 
 export default {
   install(Vue, options) {
@@ -15,14 +14,13 @@ export default {
     });
 
     // register all form components
-    // _(form).forIn((val, key) => {
-    //   console.log(val, key);
-
-    //   Vue.component(key, val);
-    // });
+    _(form).forIn((val, key) => {
+      // console.log(val, key);
+      Vue.component(key, val);
+    });
 
     // register filter
-    Vue.filter("capitalize", function(value) {
+    Vue.filter("cap", function(value) {
       if (!value) return "";
       value = value.toString();
       return value.charAt(0).toUpperCase() + value.slice(1);

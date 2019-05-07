@@ -2,20 +2,12 @@
   <div>
     <h1>Add /Edit Post</h1>
 
-    <form @submit.prevent="submit">
-      <div>
-        <label for>Title</label>
-        <input v-model="form.title">
-      </div>
-      <div>
-        <label for>Desc</label>
-        <input v-model="form.body">
-      </div>
+    <form @submit.prevent="submit" novalidate>
+      <xinput name="title" v-model="form.title" label="Title" validate="required"/>
+      <xinput name="body" v-model="form.body" label="Desc" validate="required"/>
       <img :src="form.image" v-if="form.image">
-      <div>
-        <label for>Image</label>
-        <input v-model="form.image">
-      </div>
+      <xinput name="image" v-model="form.image" label="Image" validate="required"/>
+
       <div>
         <input type="submit" value="Submit" class="btn-blue">
       </div>
@@ -28,8 +20,6 @@ import { Component, Vue } from "vue-property-decorator";
 // import { getModule } from "vuex-module-decorators";
 import Counter from "@/store/counter";
 import Post from "@/store/post";
-import { XInput } from "@/parts/form/xinput.vue";
-// import XInput from "@/parts/form/zinput.vue";
 
 // Register the router hooks with their names
 // Component.registerHooks(["beforeRouteEnter"]);
@@ -46,7 +36,7 @@ export default class CustomComponent extends Vue {
     $route: "created"
   };
 
-  // components = { XInput };
+  // components = { xinput: xinput };
 
   async submit() {
     this.form.qty = 0;

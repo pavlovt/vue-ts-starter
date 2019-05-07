@@ -5,24 +5,28 @@
       :type="type"
       ref="input"
       class="form-control"
-      :class="{'input-error': errors && errors.has(this.name)}"
       :id="id"
       :placeholder="placeholder"
+      :value="value"
       @input="update($event.target.value)"
       v-bind="$attrs"
+      :name="name"
+      v-validate="validate"
+      :class="{'input-error': errors && errors.has(this.name)}"
     >
-    <span
-      class="help is-danger failed-input-message"
+    <div
+      class="help error"
       v-show="errors && errors.has(this.name)"
-    >{{ errors && errors.first(this.name) }}</span>
+    >{{ errors && errors.first(this.name) }}</div>
   </div>
 </template>
+
 
 <script lang="ts">
 import { Component, Vue, Prop, Inject } from "vue-property-decorator";
 
-@Component
-export class XInput extends Vue {
+@Component({})
+export default class CustomComponent extends Vue {
   @Inject() $validator;
 
   @Prop(String)
@@ -39,6 +43,9 @@ export class XInput extends Vue {
 
   @Prop({ default: "text" })
   type;
+
+  @Prop(String)
+  validate;
 
   @Prop({
     default: function(val) {
